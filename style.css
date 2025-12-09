@@ -1,0 +1,45 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #212529;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+/* Navbar Styles */
+
+.navbar .navbar-brand img {
+  height: 40px;
+}
+
+.nav-link:hover {
+  color: #adb5bd !important;
+}
+
+.dropdown-menu {
+  background-color: #343a40;
+  border: 1px solid #495057;
+}
+
+.dropdown-item {
+  color: #ffffff;
+}
+
+.dropdown-item:hover {
+  background-color: #767e86;
+  color: #ffffff;
+}
+
+.profile-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+/* Custom margin for navbar and sections */
+.custom-margin {
+  padding-left: 30px;
+  padding-right: 30px;
+}
