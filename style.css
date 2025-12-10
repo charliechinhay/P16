@@ -13,12 +13,20 @@ body {
   height: 16px;
 }
 
+.kids-link .nav-link {
+  font-size: 13px;
+}
+
+.kids-link .nav-link:hover {
+  color: #ffb14a !important;
+}
+
 .navbar .navbar-brand img {
   height: 40px;
 }
 
 .nav-link:hover {
-  color: #adb5bd !important;
+  color: #d1d8df !important;
 }
 
 .dropdown-menu {
@@ -36,8 +44,7 @@ body {
 }
 
 .profile-img {
-  width: 30px;
-  height: 30px;
+  height: 25px;
   border-radius: 4px;
   object-fit: cover;
 }
@@ -46,6 +53,7 @@ body {
 .custom-margin {
   padding-left: 30px;
   padding-right: 30px;
+  cursor: pointer;
 }
 
 /*button tv shows styles */
@@ -97,6 +105,7 @@ body {
 
 .scroll-btn {
   position: absolute;
+  justify-content: center;
   top: 50%;
   transform: translateY(-50%);
   background: rgba(0, 0, 0, 0.7);
@@ -109,7 +118,6 @@ body {
   z-index: 20;
   display: flex;
   align-items: center;
-  justify-content: center;
   transition: all 0.3s ease;
   opacity: 0;
 }
@@ -136,18 +144,80 @@ body {
   height: 16px;
 }
 
-/* Responsive fixes md */
-@media (max-width: 576px) {
+/* Navbar toggler */
+.navbar-toggler {
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  padding: 4px 8px !important;
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25) !important;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.85%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='m4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+/* Responsive Design */
+
+/* Extra Small devices */
+@media (max-width: 575px) {
   .custom-margin {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
-  .me-5 {
-    margin-right: 1rem !important;
+  .custom-margin-scroll {
+    padding-left: 10px;
+  }
+
+  .me-3,
+  .me-md-5 {
+    margin-right: 0.5rem !important;
+  }
+
+  h2 {
+    font-size: 1.3rem;
   }
 
   .btn-sm {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+  }
+
+  .navbar-brand img {
+    height: 30px;
+  }
+
+  .row-scroll img {
+    height: 120px;
+  }
+
+  .d-flex.justify-content-between {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+
+  .d-flex.align-items-center:last-child {
+    margin-top: 10px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .row-scroll img {
+    height: 150px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .custom-margin {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .custom-margin-scroll {
+    padding-left: 40px;
   }
 }
