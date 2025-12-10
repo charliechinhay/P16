@@ -8,6 +8,10 @@ body {
   overflow-x: hidden;
 }
 /* Navbar Styles */
+.collapse .navbar-nav svg {
+  width: 16px;
+  height: 16px;
+}
 
 .navbar .navbar-brand img {
   height: 40px;
@@ -42,4 +46,108 @@ body {
 .custom-margin {
   padding-left: 30px;
   padding-right: 30px;
+}
+
+/*button tv shows styles */
+.d-flex .btn-group .btn svg {
+  margin: 0 4px;
+  width: 16px;
+  height: 16px;
+}
+
+/*trending section scrollbar styles */
+.custom-margin-scroll {
+  padding-left: 30px;
+  padding-right: 0;
+}
+
+.row-scroll {
+  display: flex;
+  gap: 5px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scroll-behavior: smooth;
+}
+
+.row-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.row-scroll img {
+  height: 160px;
+  border-radius: 4px;
+  flex: 0 0 auto;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.row-scroll img:hover {
+  transform: scale(1.1);
+  z-index: 10;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Scroll container and buttons */
+.scroll-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.7);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  color: white;
+  cursor: pointer;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+
+.scroll-container:hover .scroll-btn {
+  opacity: 1;
+}
+
+.scroll-btn:hover {
+  background: rgba(0, 0, 0, 0.9);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.scroll-btn-left {
+  left: 10px;
+}
+
+.scroll-btn-right {
+  right: 10px;
+}
+
+.scroll-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Responsive fixes md */
+@media (max-width: 576px) {
+  .custom-margin {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .me-5 {
+    margin-right: 1rem !important;
+  }
+
+  .btn-sm {
+    font-size: 0.75rem;
+  }
 }

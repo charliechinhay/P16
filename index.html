@@ -29,8 +29,8 @@
     <!--nav bar left-->
     <header>
       <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <div class="container-fluid custom-margin">
-          <a class="navbar-brand" href="#"
+        <div class="container-fluid custom-margin d-flex align-items-center">
+          <a class="navbar-brand d-flex align-items-center" href="#"
             ><img src="assets/imgs/Netflix_Logo_RGB.png" alt="Netflix Logo"
           /></a>
           <button
@@ -42,7 +42,10 @@
             aria-expanded="false"
             aria-label="Toggle navigation"
           ></button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div
+            class="collapse navbar-collapse d-flex align-items-center"
+            id="navbarSupportedContent"
+          >
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="#">Home</a>
@@ -85,6 +88,40 @@
 
             <!--nav bar right-->
             <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    class="bi bi-search"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> KIDS </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-bell-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901"
+                    />
+                  </svg>
+                </a>
+              </li>
+
               <li class="nav-item dropdown">
                 <a
                   class="nav-link dropdown-toggle d-flex align-items-center"
@@ -114,53 +151,121 @@
       <!--end nav bar-->
 
       <!--tv shows section-->
-      <div class="container-fluid custom-margin d-flex justify-content-between">
-        <div class="d-flex justify-content-start align-items-center mt-4 mb-3">
-          <h2 class="mb-0 me-5">TV Shows</h2>
-          <div class="btn-group" role="group">
-            <button
-              type="button"
-              class="btn btn-primary dropdown-toggle"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Genres
-            </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Dropdown link</a></li>
-              <li><a class="dropdown-item" href="#">Dropdown link</a></li>
-            </ul>
+      <div class="container-fluid custom-margin">
+        <div
+          class="d-flex justify-content-between align-items-center flex-wrap mt-4 mb-3"
+        >
+          <div class="d-flex align-items-center mb-2 mb-md-0">
+            <h2 class="mb-0 me-3 me-md-5">TV Shows</h2>
+            <div class="btn-group" role="group">
+              <button
+                type="button"
+                class="btn btn-outline-light dropdown-toggle btn-sm"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Genres
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Drama</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="d-flex align-items-center">
+            <div class="btn-group" role="group">
+              <button
+                type="button"
+                class="btn btn-outline-light btn-sm d-flex"
+                aria-expanded="false"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  class="bi bi-text-left"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M2 12.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5"
+                  />
+                </svg>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+              </ul>
+            </div>
+            <div class="btn-group" role="group">
+              <button
+                type="button"
+                class="btn btn-outline-light btn-sm d-flex"
+                aria-expanded="false"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  class="bi bi-grid"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5z"
+                  />
+                </svg>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div class="d-flex justify-content-end align-items-center mt-4 mb-3">
-          <div class="btn-group" role="group">
-            <button
-              type="button"
-              class="btn btn-primary dropdown-toggle"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
+      </div>
+      <!--end tv shows section-->
+
+      <!--trending now-->
+      <div class="container-fluid custom-margin-scroll mt-4 mb-3">
+        <h4>Trending Now</h4>
+        <div class="scroll-container">
+          <button
+            class="scroll-btn scroll-btn-left"
+            onclick="scrollImages('left')"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 16 16"
             >
-              Popularity
-            </button>
-            <ul class="dropdown-menu dropdown-menu-end">
-              <li><a class="dropdown-item" href="#">Dropdown link</a></li>
-              <li><a class="dropdown-item" href="#">Dropdown link</a></li>
-            </ul>
+              <path
+                fill-rule="evenodd"
+                d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
+              />
+            </svg>
+          </button>
+          <div class="row-scroll" id="imageContainer">
+            <img src="assets/imgs/movies/1.png" alt="image-1" />
+            <img src="assets/imgs/movies/2.png" alt="image-2" />
+            <img src="assets/imgs/movies/3.png" alt="image-3" />
+            <img src="assets/imgs/movies/4.png" alt="image-4" />
+            <img src="assets/imgs/movies/5.png" alt="image-5" />
+            <img src="assets/imgs/movies/6.png" alt="image-6" />
+            <img src="assets/imgs/movies/7.png" alt="image-7" />
           </div>
-          <div class="btn-group" role="group">
-            <button
-              type="button"
-              class="btn btn-primary dropdown-toggle"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
+          <button
+            class="scroll-btn scroll-btn-right"
+            onclick="scrollImages('right')"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 16 16"
             >
-              Popularity
-            </button>
-            <ul class="dropdown-menu dropdown-menu-end">
-              <li><a class="dropdown-item" href="#">Dropdown link</a></li>
-              <li><a class="dropdown-item" href="#">Dropdown link</a></li>
-            </ul>
-          </div>
+              <path
+                fill-rule="evenodd"
+                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+              />
+            </svg>
+          </button>
         </div>
       </div>
     </header>
