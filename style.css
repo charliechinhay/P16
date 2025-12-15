@@ -1,12 +1,12 @@
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   background-color: #212529;
   color: #ffffff;
   overflow-x: hidden;
 }
+
 /* Navbar Styles */
 .collapse .navbar-nav svg {
   width: 16px;
@@ -53,59 +53,69 @@ body {
 .custom-margin {
   padding-left: 30px;
   padding-right: 30px;
-  cursor: pointer;
 }
 
-/*button tv shows styles */
+/*Button tv shows styles */
 .d-flex .btn-group .btn svg {
   margin: 0 4px;
   width: 16px;
   height: 16px;
 }
 
-/*trending section scrollbar styles */
+/*movie scroll sections styles */
 .custom-margin-scroll {
   padding-left: 30px;
-  padding-right: 0;
+  padding-right: 30px;
 }
 
-.row-scroll {
-  display: flex;
-  gap: 5px;
-  overflow-x: auto;
-  padding-bottom: 10px;
-  scroll-behavior: smooth;
-}
-
-.row-scroll::-webkit-scrollbar {
-  height: 8px;
-}
-
-.row-scroll img {
-  height: 160px;
-  border-radius: 4px;
-  flex: 0 0 auto;
-  transition: transform 0.3s;
-  cursor: pointer;
-}
-
-.row-scroll img:hover {
-  transform: scale(1.1);
-  z-index: 10;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-}
-
-/* Scroll container and buttons */
-.scroll-container {
+/* Scroll container with buttons */
+.scroll-container-new {
   position: relative;
   display: flex;
   align-items: center;
-  margin-top: 30px;
 }
 
+/* Scroll wrapper */
+.scroll-wrapper {
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scroll-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-content {
+  display: flex;
+  gap: 0.5rem;
+  width: max-content;
+}
+
+/* Movie card styles */
+.movie-card {
+  height: 160px;
+  min-width: 107px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  object-fit: cover;
+  scroll-snap-align: start;
+  margin-right: 0.5rem;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  z-index: 10;
+}
+
+/* Scroll buttons */
 .scroll-btn {
   position: absolute;
-  justify-content: center;
   top: 50%;
   transform: translateY(-50%);
   background: rgba(0, 0, 0, 0.7);
@@ -118,17 +128,23 @@ body {
   z-index: 20;
   display: flex;
   align-items: center;
+  justify-content: center;
   transition: all 0.3s ease;
   opacity: 0;
+  text-decoration: none;
+  user-select: none;
 }
 
-.scroll-container:hover .scroll-btn {
+.scroll-container-new:hover .scroll-btn {
   opacity: 1;
 }
 
 .scroll-btn:hover {
   background: rgba(0, 0, 0, 0.9);
   transform: translateY(-50%) scale(1.1);
+  color: white;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .scroll-btn-left {
@@ -142,6 +158,41 @@ body {
 .scroll-btn svg {
   width: 16px;
   height: 16px;
+  pointer-events: none;
+}
+
+/* Radio controls for scroll */
+.scroll-radio {
+  display: none;
+}
+
+/* Scroll control */
+#trending-left:checked ~ .scroll-wrapper .scroll-content {
+  transform: translateX(0px);
+}
+
+#trending-right:checked ~ .scroll-wrapper .scroll-content {
+  transform: translateX(-400px);
+}
+
+#watch-left:checked ~ .scroll-wrapper .scroll-content {
+  transform: translateX(0px);
+}
+
+#watch-right:checked ~ .scroll-wrapper .scroll-content {
+  transform: translateX(-400px);
+}
+
+#releases-left:checked ~ .scroll-wrapper .scroll-content {
+  transform: translateX(0px);
+}
+
+#releases-right:checked ~ .scroll-wrapper .scroll-content {
+  transform: translateX(-400px);
+}
+
+.scroll-content {
+  transition: transform 0.3s ease;
 }
 
 /* Navbar toggler */
@@ -158,6 +209,47 @@ body {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.85%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='m4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
 }
 
+/* Footer Styles */
+footer {
+  margin: 5rem 8rem;
+}
+
+.footer-icon {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.footer-icon:hover {
+  transform: scale(1.1);
+}
+
+.footer-icon svg {
+  width: 24px;
+  height: 24px;
+  transition: color 0.3s ease;
+}
+
+.footer-icon .bi-facebook:hover {
+  color: #3b5998;
+}
+
+.footer-icon .bi-instagram:hover {
+  color: #e1306c;
+}
+
+.footer-icon .bi-twitter:hover {
+  color: #1da1f2;
+}
+
+.footer-icon .bi-youtube:hover {
+  color: #ff0000;
+}
+
+.footer-link .py-2:hover {
+  cursor: pointer;
+  color: #959a9e;
+}
+
 /* Responsive Design */
 
 /* Extra Small devices */
@@ -169,6 +261,7 @@ body {
 
   .custom-margin-scroll {
     padding-left: 10px;
+    padding-right: 10px;
   }
 
   .me-3,
@@ -189,24 +282,27 @@ body {
     height: 30px;
   }
 
-  .row-scroll img {
+  .movie-card {
     height: 120px;
+    min-width: 80px;
   }
 
-  .d-flex.justify-content-between {
-    flex-direction: column;
-    align-items: flex-start !important;
+  .scroll-btn {
+    width: 35px;
+    height: 35px;
   }
 
-  .d-flex.align-items-center:last-child {
-    margin-top: 10px;
+  .scroll-btn svg {
+    width: 14px;
+    height: 14px;
   }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991px) {
-  .row-scroll img {
+  .movie-card {
     height: 150px;
+    min-width: 100px;
   }
 }
 
@@ -219,5 +315,11 @@ body {
 
   .custom-margin-scroll {
     padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .movie-card {
+    height: 180px;
+    min-width: 120px;
   }
 }
